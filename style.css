@@ -122,6 +122,9 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.arrow {
+  position: absolute;
+}
 .basket-btn {
   position: relative;
   width: 40px;
