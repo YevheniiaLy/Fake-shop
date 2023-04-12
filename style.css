@@ -169,6 +169,7 @@ header {
   height: 400px;
   background-color: #000000;
 }
+
 /* main-wrap */
 .main-wrapper {
   margin: auto;
@@ -176,13 +177,54 @@ header {
   display: flex;
   padding: 0 12px;
 }
+/* sider style */
 .sider {
-  opacity: 0.2;
   width: 25%;
   height: 843px;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
   border: 1px solid #ffffff;
+  padding: 30px;
 }
+.sider-title {
+  font-size: 21px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 25px;
+}
+.label-checkbox {
+  display: block;
+  font-size: 21px;
+  font-weight: 300;
+  color: white;
+  margin-top: 25px;
+}
+.label-checkbox::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid white;
+  margin-right: 5px;
+}
+.input-checkbox {
+  display: none;
+}
+.input-checkbox:checked + .label-checkbox::before {
+  background-color: #ffffff;
+}
+.sider-more {
+  font-size: 21px;
+  font-weight: 300;
+  color: white;
+}
+.dev-type {
+  margin-bottom: 40px;
+}
+.dev-color {
+  margin-bottom: 40px;
+}
+
+/* main style  */
 .main-inform-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -382,7 +424,7 @@ header {
   padding: 15px 30px;
   width: 210px;
   height: 50px;
-
+  background-color: #2c71b8;
   border: solid 1px white;
 }
 .more-btn a {
