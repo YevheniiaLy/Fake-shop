@@ -352,12 +352,11 @@ header {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url(./img/icon\ like.png);
   top: 50px;
   right: 10px;
   border: solid 1px #548cc5;
 }
-.liked-pic {
+/* .liked-pic {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -365,7 +364,7 @@ header {
   top: 50px;
   right: 10px;
   background-color: #ffffff;
-}
+} */
 
 .inform-block {
   padding: 15px;
