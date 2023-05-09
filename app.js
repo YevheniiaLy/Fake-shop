@@ -30,18 +30,14 @@ likeBtn.forEach((item) => {
 //More details
 let moreDetailsBtn = document.querySelectorAll(".more-btn");
 
-let form = document.querySelector(".main-form");
-
-let overlay = document.querySelector(".overlay");
+let modal = document.querySelector(".modal");
 
 moreDetailsBtn.forEach((btn) =>
   btn.addEventListener("click", function () {
-    form.style.display = "block";
-    overlay.style.display = "block";
+    modal.style.display = "block";
   })
 );
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", function () {
-  form.style.display = "none";
-  overlay.style.display = "none";
+  modal.style.display = "none";
 });

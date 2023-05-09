@@ -465,8 +465,16 @@ header {
   line-height: 100px;
 }
 /* form */
-.main-form {
+.modal {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 55;
+}
+.main-form {
   border: solid 1px rgb(255, 255, 255);
 
   width: 400px;
@@ -546,7 +554,6 @@ textarea {
   color: white;
 }
 .overlay {
-  display: none;
   position: fixed;
   top: 0;
   right: 0;
