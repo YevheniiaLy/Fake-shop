@@ -32,7 +32,7 @@ let moreDetailsBtn = document.querySelectorAll(".more-btn");
 
 let modal = document.querySelector(".modal");
 
-/* moreDetailsBtn.forEach((btn) =>
+ moreDetailsBtn.forEach((btn) =>
   btn.addEventListener("click", function () {
     modal.style.display = "block";
   })
@@ -40,4 +40,4 @@ let modal = document.querySelector(".modal");
 let close = document.querySelector(".btn-close");
 close.addEventListener("click", function () {
   modal.style.display = "none";
-}); */
+}); 
