@@ -164,12 +164,69 @@ header {
 
 /* slider style start */
 .slider-wrap {
-  opacity: 0.2;
-  width: 100%;
   height: 400px;
-  background-color: #000000;
+  width: 1200px;
+  margin: auto;
+  padding: 35px;
 }
+.slider {
+}
+.slick-prev:before {
+  content: "";
+  display: block;
+  background-image: url(./img/arrow_left_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 34px;
+  width: 27px;
+  height: 52px;
+}
+.slick-next:before {
+  content: "";
+  display: block;
+  background-image: url(./img/arrow_right_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 34px;
+  width: 27px;
+  height: 52px;
+}
+.slick-arrow {
+  width: 27px;
+  height: 52px;
+}
+.slick-dots {
+  bottom: 0px;
+}
+.slick-dots li.slick-active button:before {
+  background-image: url(./img/white_square_icon.svg);
+  background-size: 11px;
+  background-position-y: bottom;
+  color: #ffffff;
+  content: "";
+  opacity: 1;
+  width: 11px;
+  height: 11px;
+}
+.slick-dots li button:before {
+  background-image: url(./img/square_thin_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 10px;
 
+  color: #ffffff;
+  content: "";
+  opacity: 1;
+  width: 11px;
+  height: 11px;
+}
+.slider > div {
+  font-size: 100px;
+  letter-spacing: 10px;
+  line-height: 40px;
+
+  font-weight: 250;
+  color: white;
+  text-align: center;
+  padding: 150px 0;
+}
 /* main-wrap */
 .main-wrapper {
   margin: auto;
@@ -355,16 +412,21 @@ header {
   top: 50px;
   right: 10px;
   border: solid 1px #548cc5;
+  background-image: url(./img/icon\ like.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
-/* .liked-pic {
+.liked-pic {
   position: absolute;
   width: 32px;
   height: 32px;
-  background-image: url(./img/icon\ like3.png);
+  background-image: url(./img/icon\ liked.png);
+  background-repeat: no-repeat;
+  background-position: center;
   top: 50px;
   right: 10px;
-  background-color: #ffffff;
-} */
+  background-color: #2c71b8;
+}
 
 .inform-block {
   padding: 15px;
@@ -465,24 +527,32 @@ header {
 }
 /* form */
 .modal {
-  display: none;
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 55;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-block {
+  position: absolute;
+  width: 400px;
+  height: 340px;
+  right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
 }
 .main-form {
   border: solid 1px rgb(255, 255, 255);
 
   width: 400px;
   height: 340px;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+
   text-align: center;
   position: fixed;
   background-color: #2c71b8;
@@ -547,7 +617,7 @@ textarea {
 }
 .form-title {
   font-size: 21px;
-  font-weight: 700;
+  font-weight: 400;
   margin-top: 20px;
   margin-bottom: 20px;
   color: white;
