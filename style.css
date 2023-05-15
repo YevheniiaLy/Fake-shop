@@ -586,8 +586,6 @@ header {
   margin-top: 10px;
 }
 input {
-  width: 100%;
-
   border: none;
   height: 20px;
 }
@@ -635,4 +633,8 @@ textarea {
 }
 .hide {
   display: none;
+}
+.product-quantity {
+  text-align: center;
+  margin-bottom: 10px;
 }
