@@ -57,3 +57,52 @@ modal.addEventListener("click", function (e) {
 });*/
 //slider
 $(".slider").slick({ dots: true });
+
+//counter
+function Counter(incrementBtn, decrementBtn, inputField) {
+  this.domRefs = {
+    incrementBtn,
+    decrementBtn,
+    inputField,
+  };
+  this.toggleButtonState = function () {
+    let count = +this.domRefs.inputField.value;
+    this.domRefs.decrementBtn.disabled = count <= 1;
+    this.domRefs.incrementBtn.disabled = count >= 10;
+  };
+  this.toggleButtonState();
+  this.increment = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+    this.toggleButtonState();
+  };
+  this.decrement = function () {
+    this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+    this.toggleButtonState();
+  };
+
+  this.domRefs.incrementBtn.addEventListener(
+    "click",
+    this.increment.bind(this)
+  );
+  this.domRefs.decrementBtn.addEventListener(
+    "click",
+    this.decrement.bind(this)
+  );
+}
+const incrementBtns = Array.from(
+  document.querySelectorAll(".increment-button")
+);
+const decrementBtns = Array.from(
+  document.querySelectorAll(".decrement-button")
+);
+const inputFields = Array.from(
+  document.querySelectorAll(".product-quantity input")
+);
+
+const counter = {};
+
+for (let i = 0; i < incrementBtns.length; i++) {
+  counter[i] = new Counter(incrementBtns[i], decrementBtns[i], inputFields[i]);
+}
+
+console.log(counter);
